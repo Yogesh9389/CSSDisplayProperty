@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        html{
+            background-color: rgb(51, 46, 46);
+        }
+        h1{
+            color: rgb(255, 255, 255);
+            font-family: 'Caveat', cursive;
+            font-family: 'Ubuntu', sans-serif; 
+            text-align: center;
+        }
+       p{
+        color:rgb(248, 247, 240);
+        font-family: 'Caveat', cursive;
+        font-family: 'Ubuntu', sans-serif; 
+        font-weight: bold;
+        text-align: center;
+       } 
+       .block{
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(225,59,38);
+        margin-bottom: 10px;
+       }
+       .inline{
+        display: inline;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(44, 224, 16);
+        margin-bottom: 10px;
+       }
+       .inline-block{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(21, 126, 164);
+        margin-bottom: 10px;
+       }
+       .input-group{
+        margin-top: 10px;
+       }
+       .slider-group{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+       }
+       .slider-label{
+        margin-right: 10px;
+       }
+       .slider{
+        flex: 1;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 5px;
+        background-color: rgb(255, 230, 230);
+        outline: none;
+        margin: 0;
+        padding: 0;
+       }
+       .slider::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background-color: rgb(130, 66, 153);
+        cursor:pointer
+       }
+       .slider::-moz-range-thumb{
+        width: 15px;
+        height: 15px;
+        background-color: rgb(130, 66, 153);
+        cursor: pointer;
+       }
+       .red{
+        background-color: rgb(225,59,38);
+       }
+       .green{
+        background-color: rgb(44, 224, 16);
+       }
+       .blue{
+        background-color: rgb(21, 126, 164);
+       }
+       output{
+        color: white;
+        font-family: 'Caveat', cursive;
+        font-family: 'Ubuntu', sans-serif;
+       }
+       footer{
+        color: white;
+        font-family: 'Caveat', cursive;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+       }
+    @media (max-width: 680px){
+        .h1 {
+            width: 100px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>CSS Display Property</h1>
+    <p class="block" style="height: 36px; width: 217px;">Block Paragraph</p>
+    <p class="inline">Inline Paragraph</p><br/>
+    <p class="inline-block">Inline-Block Paragraph</p>
+    <div class="input-group">
+        <div class="slider-group">
+            <lable class="slider-lable" for="block-height-slider"><p id="lable">Block Height</p></lable>
+            <input type="range" id="block-height-slider" min="100" max="2000" value="200" class="slider red">
+            <output id="block-height-output">236</output>
+        </div>
+        <div class="slider-group">
+            <lable class="slider-lable" for="block-width-slider"><p>Block Width</p></lable>
+            <input type="range" id="block-width-slider" min="100" max="2000" value="200" class="slider red">
+            <output id="block-width-output">217</output>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="slider-group">
+            <lable class="slider-lable" for="inline-height-slider"><p>Inline Height</p></lable>
+            <input type="range" id="inline-height-slider" min="100" max="2000" value="200" class="slider green">
+            <output id="inline-height-slider">100</output>
+        </div>
+        <div class="slider-group">
+            <lable class="slider-lable" for="inline-width-slider"><p>Inline Width</p></lable>
+            <input type="range" id="inline-width-slider" min="100" max="2000" value="200" class="slider green">
+            <output id="inline-width-output">100</output>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="slider-group">
+            <lable class="slider-lable" for="inline-block-height-slider"><p>Inline Block Height</p></lable>
+            <input type="range" id="inline-block-height-slider" min="100" max="2000" value="200" class="slider blue">
+            <output id="inline-block-height-slider">150</output>
+        </div>
+        <div class="slider-group">
+            <lable class="slider-lable" for="inline-block-width-slider"><p>Inline Block Width</p></lable>
+            <input type="range" id="inline-block-width-slider" min="100" max="2000" value="200" class="slider blue">
+            <output id="inline-block-width-output">150</output>
+        </div>
+    </div>
+    <footer>
+        &copy; Yogesh Pal Parmar 2023
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
